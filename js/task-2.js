@@ -27,11 +27,8 @@ const images = [
 
 const ul = document.querySelector('.gallery');
 
-document.addEventListener('DOMContentLoaded', () => {
 const markup = imagesTemplate(images);
 ul.insertAdjacentHTML('beforeend', markup);
-}
-)
 
 function imageTemplate({url, alt}){
   return `<li><img src="${url}" alt="${alt}" width="300"></li>`;
