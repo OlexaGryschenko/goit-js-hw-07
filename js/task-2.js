@@ -1,20 +1,3 @@
-const ul = document.querySelector('ul');
-
-document.addEventListener('DOMContentLoaded', () => {
-const markup = imagesTemplate(images);
-ul.insertAdjacentHTML('beforeend', markup);
-}
-)
-
-function imageTemplate({url, alt}){
-  return `<li><img src="${url}" alt="${alt}" width="300"></li>`;
-}
-
-function imagesTemplate(images){
-  return images.map(imageTemplate).join('');
-}
-
-
 const images = [
   {
     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
@@ -41,3 +24,22 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+const ul = document.querySelector('.gallery');
+
+document.addEventListener('DOMContentLoaded', () => {
+const markup = imagesTemplate(images);
+ul.insertAdjacentHTML('beforeend', markup);
+}
+)
+
+function imageTemplate({url, alt}){
+  return `<li><img src="${url}" alt="${alt}" width="300"></li>`;
+}
+
+function imagesTemplate(images){
+  return images.map(imageTemplate).join('');
+}
+
+
+
